@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Base</title>
+
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'home_web.css'%}" />
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+      <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand" href="">
+          <strong>Webera</strong>
+        </a>
+
+        <!-- Collapse -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Left -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="hom">Home </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="login">Login</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="add">Register</a>
+            </li>
+          </ul>
+
+          <!-- Right -->
+          <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+              <a
+                style="color: black"
+                href="#"
+                class="nav-link border border-dark rounded"
+                target="_blank"
+              >
+                <i class="fab fa-github mr-2"></i>Webera GitHub
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    {% include 'messages.html' %} {% block content %} {% endblock %}
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div class="copyright" style="margin-top: 20px">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <span>Copyright © 2021, All Right Reserved Webera</span>
+          </div>
+          <!-- End Col -->
+          <div class="col-md-6">
+            <div class="copyright-menu">
+              <ul>
+                <li>
+                  <a href="#">Terms</a>
+                </li>
+                <li>
+                  <a href="#">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End col -->
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Copyright Container -->
+    </div>
+
+    <script>
+      setTimeout(function () {
+        if ($("#msg").length > 0) {
+          $("#msg").remove();
+        }
+        console.log("fffffff");
+      }, 2000);
+    </script>
+  </body>
+</html>

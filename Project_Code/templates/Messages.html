@@ -1,0 +1,23 @@
+
+
+{% if messages %}
+    {% for message in messages %}
+        <div style="background-color: white, ;text-align: center;" class="alert {{ message.tags }} m-2" id="msg" role="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %} 
+
+
+
+
+
+<!-- {% if messages %}
+    {% for message in messages %}
+    
+        
+            <h3  id="msg" >{{ message }}</h3>
+        
+    {% endfor %}
+{% endif %}  -->
+
